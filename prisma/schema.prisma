@@ -8,39 +8,56 @@ datasource db {
 }
 
 model User {
-  id         String    @id @default(uuid())
-  email      String    @unique
-  password   String
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+
   @@map("users")
 }
 
 model Client {
-  id                      String      @id @default(uuid())
-  name                    String
-  email                   String
-  phone                   String
-  adress                  String
-  clientRequest           ClientRequest?
+  id            String         @id @default(uuid())
+  name          String
+  email         String         @unique
+  phone         String
+  adress        String
+
   @@map("clients")
+  clientRequest ClientRequest[]
 }
 
 model ClientRequest {
-  id                  String      @id @default(uuid())
-  client              Client?      @relation(fields: [clientId], references: [id], onDelete: SetNull)
-  clientId            String?
-  products            Product[]
-  request_date        DateTime        @default(now())
-  status              String
+  id           String    @id @default(uuid())
+  products     String[]
+  request_date DateTime  @default(now())
+  status       status    @default(WAITING_PAYMENT)
 
   @@map("clientRequests")
+  client       Client?   @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  clientId     String?   
 }
 
 model Product {
-  id               String      @id @default(uuid())
-  name             String
-  price            Float
-  description      String
-  ClientRequest    ClientRequest? @relation(fields: clientRequestId, references: [id], onDelete: SetNull)
-  clientRequestId  String?  
-  @@map("products")
+  id          String     @id @default(uuid())
+  name        String
+  code        Int        @default(autoincrement())
+  price       Float
+  description description
+}
+
+enum description {
+  HEADSET
+  MICROPHONE
+  MOUSE
+  KEYBOARD
+  LAPTOP
+  MONITOR
+  MOTHERBOARD
+}
+
+enum status {
+  WAITING_PAYMENT
+  PRODUCT_IN_SEPARATION
+  READY_TO_DELIVER
+  DELIVERED
 }
