@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const authPasswordController_1 = require("../controllers/authPasswordController");
+const ProductController_1 = require("../controllers/ProductController");
+const router = (0, express_1.Router)();
+router.get('/', ProductController_1.getAllProducts, authPasswordController_1.checkUserCredencials);
+router.post('/', ProductController_1.createProduct, authPasswordController_1.checkUserCredencials);
+router.delete('/', ProductController_1.deleteProduct, authPasswordController_1.checkUserCredencials);
+router.put('/', ProductController_1.updateProduct, authPasswordController_1.checkUserCredencials);
+module.exports = router;
