@@ -1,8 +1,8 @@
 export const swaggerDocument = {
   "openapi": "3.0.1",
   "info": {
-    "title": "defaultTitle",
-    "description": "defaultDescription",
+    "title": "Loomi Challenge",
+    "description": "API documentation for Loomi Challenge",
     "version": "0.1"
   },
   "servers": [
@@ -13,7 +13,7 @@ export const swaggerDocument = {
   "paths": {
     "/user/": {
       "get": {
-        "description": "Auto generated using Swagger Inspector",
+        "summary": "Return all users",
         "responses": {
           "200": {
             "description": "Auto generated using Swagger Inspector",
@@ -27,6 +27,7 @@ export const swaggerDocument = {
             }
           }
         },
+        "tags" : [ "user" ],
         "servers": [
           {
             "url": "https://loomi-challenge.herokuapp.com"
@@ -34,7 +35,7 @@ export const swaggerDocument = {
         ]
       },
       "put": {
-        "description": "Auto generated using Swagger Inspector",
+        "summary": "Update user data",
         "requestBody": {
           "content": {
             "application/json": {
@@ -68,6 +69,7 @@ export const swaggerDocument = {
             }
           }
         },
+        "tags" : [ "user" ],
         "servers": [
           {
             "url": "https://loomi-challenge.herokuapp.com"
@@ -75,7 +77,7 @@ export const swaggerDocument = {
         ]
       },
       "post": {
-        "description": "Auto generated using Swagger Inspector",
+        "summary": "Create a user",
         "requestBody": {
           "content": {
             "application/json": {
@@ -109,6 +111,7 @@ export const swaggerDocument = {
             }
           }
         },
+        "tags" : [ "user" ],
         "servers": [
           {
             "url": "https://loomi-challenge.herokuapp.com"
@@ -116,7 +119,7 @@ export const swaggerDocument = {
         ]
       },
       "delete": {
-        "description": "Auto generated using Swagger Inspector",
+        "summary": "Delete a user",
         "responses": {
           "200": {
             "description": "Auto generated using Swagger Inspector",
@@ -130,6 +133,7 @@ export const swaggerDocument = {
             }
           }
         },
+        "tags" : [ "user" ],
         "servers": [
           {
             "url": "https://loomi-challenge.herokuapp.com"
@@ -141,7 +145,346 @@ export const swaggerDocument = {
           "url": "https://loomi-challenge.herokuapp.com"
         }
       ]
-    }
+    },
+    "/product/": {
+      "get": {
+        "summary": "Return all products",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "product" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update product data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "product" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create a product",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body_1"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "product" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete a product",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "product" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://loomi-challenge.herokuapp.com"
+        }
+      ]
+    },
+    "/client/": {
+      "get": {
+        "summary": "Return all clients",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "client" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update client data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "client" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create a client",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body_1"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "client" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete a client",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "client" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://loomi-challenge.herokuapp.com"
+        }
+      ]
+    },
+    "/clientRequest/": {
+      "get": {
+        "summary": "Return all client requests",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "clientRequest" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update client request data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "clientRequest" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create a client request",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body_1"
+              },
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "clientRequest" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete a client request",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "tags" : [ "clientRequest" ],
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://loomi-challenge.herokuapp.com"
+        }
+      ]
+    },
   },
   "components": {
     "securitySchemes": {
@@ -215,7 +558,4 @@ export const swaggerDocument = {
       },
     },
   },
-  "security": [{
-    "bearerAuth": [],
-  }],
 };
