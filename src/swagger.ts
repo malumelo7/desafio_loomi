@@ -11,47 +11,6 @@ export const swaggerDocument = {
     }
   ],
   "paths": {
-    "/register": {
-      "description": "Auto generated using Swagger Inspector",
-      "requestBody": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/user_body_1"
-            },
-            "examples": {
-              "0": {
-                "value": "{\n    \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\"\n}"
-              },
-              "1": {
-                "value": "{\n        \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\",\n        \"email\": \"malumalu@gmail.com\",\n        \"password\": \"1234\"\n    }"
-              },
-              "2": {
-                "value": "{\n        \"email\": \"malu@gmail.com\",\n        \"password\": \"1234\"\n    }"
-              }
-            }
-          }
-        }
-      },
-      "responses": {
-        "200": {
-          "description": "Auto generated using Swagger Inspector",
-          "content": {
-            "application/json; charset=utf-8": {
-              "schema": {
-                "type": "string"
-              },
-              "examples": {}
-            }
-          }
-        }
-      },
-      "servers": [
-        {
-          "url": "https://loomi-challenge.herokuapp.com"
-        }
-      ]
-    },
     "/user/": {
       "get": {
         "description": "Auto generated using Swagger Inspector",
@@ -81,6 +40,47 @@ export const swaggerDocument = {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/user_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\"\n}"
+                },
+                "1": {
+                  "value": "{\n        \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\",\n        \"email\": \"malumalu@gmail.com\",\n        \"password\": \"1234\"\n    }"
+                },
+                "2": {
+                  "value": "{\n        \"email\": \"malu@gmail.com\",\n        \"password\": \"1234\"\n    }"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://loomi-challenge.herokuapp.com"
+          }
+        ]
+      },
+      "post": {
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/user_body_1"
               },
               "examples": {
                 "0": {

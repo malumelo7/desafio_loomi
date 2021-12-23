@@ -8,7 +8,6 @@ const userRouter = require('./routes/userRoutes')
 const clientRouter = require('./routes/clientRoutes')
 const clientRequestRouter = require('./routes/clientRequestRoutes')
 const productRouter = require('./routes/productRoutes')
-const loginRouter = require('./routes/loginRouter')
 
 const app = express();
 
@@ -20,7 +19,6 @@ app.use('/user', userRouter)
 app.use('/client', clientRouter)
 app.use('/clientRequest', clientRequestRouter)
 app.use('/product', productRouter)
-app.use('/login', loginRouter)
 
 
 app.listen(process.env.PORT || 4321, ()=>{

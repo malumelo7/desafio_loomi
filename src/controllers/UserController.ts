@@ -10,10 +10,7 @@ export const getAllUsers = async (req, res) => {
 }
 
 export const createUser = async (req, res) => {
-    const {email} = req.body
-
-    const salt = await genSalt()
-    const password = await hash(req.body.password, salt)
+    const {email, password} = req.body
 
     const newUser = await prisma.user.create({
         data: {
