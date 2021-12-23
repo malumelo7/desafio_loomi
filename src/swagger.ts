@@ -44,13 +44,7 @@ export const swaggerDocument = {
               },
               "examples": {
                 "0": {
-                  "value": "{\n    \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\"\n}"
-                },
-                "1": {
                   "value": "{\n        \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\",\n        \"email\": \"malumalu@gmail.com\",\n        \"password\": \"1234\"\n    }"
-                },
-                "2": {
-                  "value": "{\n        \"email\": \"malu@gmail.com\",\n        \"password\": \"1234\"\n    }"
                 }
               }
             }
@@ -86,12 +80,6 @@ export const swaggerDocument = {
               },
               "examples": {
                 "0": {
-                  "value": "{\n    \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\"\n}"
-                },
-                "1": {
-                  "value": "{\n        \"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\",\n        \"email\": \"malumalu@gmail.com\",\n        \"password\": \"1234\"\n    }"
-                },
-                "2": {
                   "value": "{\n        \"email\": \"malu@gmail.com\",\n        \"password\": \"1234\"\n    }"
                 }
               }
@@ -128,7 +116,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\"id\": \"1c8130f1-968b-44f0-8ff5-613c8e3b921b\"}"
+                  }
+                }
               }
             }
           }
@@ -188,7 +180,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"id\": \"00b36f06-a41b-43f2-b3a5-75ba2f179fc5\",\n    \"name\": \"Laptop Gamer G600\",\n    \"price\": 3600.00,\n    \"description\": \"LAPTOP\"\n}"
+                  }
+                }
               }
             }
           }
@@ -219,7 +215,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"name\": \"Laptop Gamer G600\",\n    \"price\": 3600.00,\n    \"description\": \"LAPTOP\"\n}"
+                  }
+                }
               }
             }
           }
@@ -241,7 +241,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"id\": \"00b36f06-a41b-43f2-b3a5-75ba2f179fc5\"\n}"
+                  }
+                }
               }
             }
           }
@@ -301,7 +305,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"id\": \"91dcebe8-bf57-4491-8629-ef749d4b682e\",\n    \"name\": \"Malu\",\n    \"email\": \"malumvbmelo@gmail.com\",\n    \"phone\": \"12345678\",\n    \"adress\": \"Rua do Sol\"\n}"
+                  }
+                }
               }
             }
           }
@@ -332,7 +340,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"name\": \"Malu\",\n    \"email\": \"malumvbmelo@gmail.com\",\n    \"phone\": \"12345678\",\n    \"adress\": \"Rua do Sol\"\n}"
+                  }
+                }
               }
             }
           }
@@ -354,7 +366,11 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"id\": \"91dcebe8-bf57-4491-8629-ef749d4b682e\"\n}"
+                  }
+                }
               }
             }
           }
@@ -414,7 +430,15 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": {
+                      "id": "d5ff8466-cbd7-4e92-9d44-80b1f5cf200c",
+                      "products": ["4c99ac24-5b22-4bc6-9f1b-e69b65bce210"],
+                      "status": "WAITING_PAYMENT"
+                  }
+                  }
+                }
               }
             }
           }
@@ -445,7 +469,15 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": {
+                      "clientId": "d5ff8466-cbd7-4e92-9d44-80b1f5cf200c",
+                      "products": ["4c99ac24-5b22-4bc6-9f1b-e69b65bce210"],
+                      "status": "WAITING_PAYMENT"
+                  }
+                  }
+                }
               }
             }
           }
@@ -467,7 +499,13 @@ export const swaggerDocument = {
                 "schema": {
                   "type": "string"
                 },
-                "examples": {}
+                "examples": {
+                  "0": {
+                    "value": {
+                      "clientId": "d5ff8466-cbd7-4e92-9d44-80b1f5cf200c"
+                  }
+                  }
+                }
               }
             }
           }
