@@ -6,7 +6,7 @@ import { authenticateToken } from "../middleware/authenticateToken";
 const router = Router()
 
 router.get('/', authenticateToken, getAllUsers)
-router.post('/', authenticateToken, createUser)
+router.post('/', createUser)
 router.delete('/', authenticateToken, deleteUser)
 router.put('/', authenticateToken, updateUser)
 
