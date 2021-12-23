@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { genSalt, hash } from "bcrypt"
 
 const prisma = new PrismaClient();
 
@@ -9,7 +10,11 @@ export const getAllUsers = async (req, res) => {
 }
 
 export const createUser = async (req, res) => {
-    const {email, password} = req.body
+    const {email} = req.body
+
+    const salt = await genSalt()
+    const password = await hash(req.body.password, salt)
+
     const newUser = await prisma.user.create({
         data: {
             email: email,
