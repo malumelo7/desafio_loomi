@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { checkUserCredencials } from "../controllers/authPasswordController";
 import { createUser, deleteUser, getAllUsers, updateUser } from "../controllers/UserController";
+import { authenticateToken } from "../middleware/authenticateToken";
 
 const router = Router()
 
-router.get('/', getAllUsers, checkUserCredencials)
-router.post('/', createUser)
-router.delete('/', deleteUser, checkUserCredencials)
-router.put('/', updateUser, checkUserCredencials)
+router.get('/', authenticateToken, getAllUsers)
+router.post('/', authenticateToken, createUser)
+router.delete('/', authenticateToken, deleteUser)
+router.put('/', authenticateToken, updateUser)
 
 module.exports = router
